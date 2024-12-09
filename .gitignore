@@ -2,8 +2,6 @@ build/
 bin/
 .vs
 vendor/
-*.vcxproj
-*.filters
 *.user
 /pixel/pixel.vcxproj
 /pixel/pixel.vcxproj.filters
