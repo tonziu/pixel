@@ -41,3 +41,13 @@ void pixel::ClearBackground(Color color)
 	glClearColor(color.r / 255.0f, color.g / 255.0f, color.b / 255.0f, color.a / 255.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 }
+
+void pixel::CloseWindow()
+{
+	if (g_Engine.window)
+	{
+		glfwDestroyWindow(g_Engine.window);
+	}
+
+	glfwTerminate();
+}

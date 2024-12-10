@@ -12,5 +12,7 @@ int main(void)
 		pixel::EndDrawing();
 	}
 
+	pixel::CloseWindow();
+
 	return 0;
 }

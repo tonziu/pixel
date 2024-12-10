@@ -10,6 +10,8 @@ namespace pixel
 
 	bool CreateWindow(int width, int height, const char* title);
 
+	void CloseWindow();
+
 	bool WindowShouldClose();
 
 	void ClearBackground(Color color);
