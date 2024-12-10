@@ -9,6 +9,8 @@ namespace pixel
 	typedef struct Engine
 	{
 		GLFWwindow* window;
+		int target_fps;
+		double time_previous;
 	} Engine;
 }
 

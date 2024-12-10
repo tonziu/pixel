@@ -17,6 +17,8 @@ namespace pixel
 	void ClearBackground(Color color);
 
 	void EndDrawing();
+
+	void SetTargetFPS(int fps);
 }
 
 #endif // H_PIXEL

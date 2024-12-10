@@ -1,5 +1,9 @@
 #include "pixel.h"
 
+#include <iostream>
+
+constexpr int DEFAULT_TARGET_FPS = 60;
+
 bool pixel::CreateWindow(int width, int height, const char* title)
 {
 	if (glfwInit() == GLFW_FALSE)
@@ -22,6 +26,12 @@ bool pixel::CreateWindow(int width, int height, const char* title)
 		return false;
 	}
 
+	g_Engine.target_fps = DEFAULT_TARGET_FPS;
+
+	g_Engine.time_previous = glfwGetTime();
+
+	glfwSwapInterval(0);
+
 	return true;
 }
 
@@ -32,8 +42,14 @@ bool pixel::WindowShouldClose()
 
 void pixel::EndDrawing()
 {
-	glfwSwapBuffers(g_Engine.window);
 	glfwPollEvents();
+
+	while (glfwGetTime() < g_Engine.time_previous + 1.0 / g_Engine.target_fps) 
+	{
+	}
+
+	glfwSwapBuffers(g_Engine.window);
+	g_Engine.time_previous += 1.0 / g_Engine.target_fps;
 }
 
 void pixel::ClearBackground(Color color)
@@ -50,4 +66,9 @@ void pixel::CloseWindow()
 	}
 
 	glfwTerminate();
+}
+
+void pixel::SetTargetFPS(int fps)
+{
+	g_Engine.target_fps = fps;
 }
