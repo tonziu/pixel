@@ -2,6 +2,7 @@
 #define H_PIXEL
 
 #include "pxl_engine.h"
+#include "pxl_color.h"
 
 namespace pixel
 {
@@ -10,6 +11,8 @@ namespace pixel
 	bool CreateWindow(int width, int height, const char* title);
 
 	bool WindowShouldClose();
+
+	void ClearBackground(Color color);
 
 	void EndDrawing();
 }
