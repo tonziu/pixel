@@ -1,6 +1,5 @@
 #include "pixel.h"
-
-#include <iostream>
+#include "pxl_engine.h"
 
 constexpr int DEFAULT_TARGET_FPS = 60;
 
@@ -44,7 +43,7 @@ void pixel::EndDrawing()
 {
 	glfwPollEvents();
 
-	while (glfwGetTime() < g_Engine.time_previous + 1.0 / g_Engine.target_fps) 
+	while (glfwGetTime() < g_Engine.time_previous + 1.0 / g_Engine.target_fps)
 	{
 	}
 

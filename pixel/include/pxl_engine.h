@@ -1,11 +1,20 @@
-#ifndef H_PIXEL
-#define H_PIXEL
+#ifndef H_PIXEL_ENGINE
+#define H_PIXEL_ENGINE
 
-#include "pxl_engine.h"
+#include "glad/glad.h"
+#include "GLFW/glfw3.h"
+
 #include "pxl_color.h"
 
 namespace pixel
 {
+	typedef struct Engine
+	{
+		GLFWwindow* window;
+		int target_fps;
+		double time_previous;
+	} Engine;
+
 	static Engine g_Engine = {};
 
 	bool CreateWindow(int width, int height, const char* title);
@@ -19,6 +28,7 @@ namespace pixel
 	void EndDrawing();
 
 	void SetTargetFPS(int fps);
+
 }
 
-#endif // H_PIXEL
+#endif // H_PIXEL_ENGINE
