@@ -7,6 +7,7 @@ Please consider that this is a personal project, it may be far from good.
 
 ## What it does
 Here is a list of features currently supported:
+- Basic FPS locking (not very accurate but it serves its purpose for now)
 - Basic text rendering (default font, scaling, colour)
 ---
 ## Hello World demo
