@@ -14,6 +14,7 @@ namespace pixel
 
 	const Color RED = { 255, 0, 0, 255 };
 	const Color LIGHTGRAY = { 200, 200, 200, 255 };
+	const Color DARKGRAY = { 22, 22, 22, 255 };
 	const Color BLACK = { 0, 0, 0, 255 };
 }
 

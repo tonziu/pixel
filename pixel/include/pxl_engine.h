@@ -5,6 +5,7 @@
 #include "GLFW/glfw3.h"
 
 #include "pxl_color.h"
+#include "pxl_text_renderer.h"
 
 namespace pixel
 {
@@ -13,6 +14,8 @@ namespace pixel
 		GLFWwindow* window;
 		int target_fps;
 		double time_previous;
+		Font font;
+		TextRenderer text_renderer;
 	} Engine;
 
 	static Engine g_Engine = {};
@@ -29,6 +32,7 @@ namespace pixel
 
 	void SetTargetFPS(int fps);
 
+	void DrawText(std::string text, int posx, int posy, int text_size, Color color);
 }
 
 #endif // H_PIXEL_ENGINE

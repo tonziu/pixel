@@ -14,7 +14,9 @@ int main(void)
 
 	while (pixel::WindowShouldClose() == false)
 	{
-		pixel::ClearBackground(pixel::LIGHTGRAY);
+		pixel::ClearBackground(pixel::DARKGRAY);
+
+		pixel::DrawText("Hello from Pixel!", 240, 260, 18, pixel::LIGHTGRAY);
 
 		pixel::EndDrawing();
 	}

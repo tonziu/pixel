@@ -22,12 +22,21 @@
     <ClInclude Include="include\pixel.h" />
     <ClInclude Include="include\pxl_color.h" />
     <ClInclude Include="include\pxl_engine.h" />
+    <ClInclude Include="include\pxl_font.h" />
     <ClInclude Include="include\pxl_shader.h" />
+    <ClInclude Include="include\pxl_text_renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="core\example.cpp" />
     <ClCompile Include="core\glad.c" />
     <ClCompile Include="core\pxl_engine.cpp" />
+    <ClCompile Include="core\pxl_font.cpp" />
+    <ClCompile Include="core\pxl_shader.cpp" />
+    <ClCompile Include="core\pxl_text_renderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\pxl_text_fshader.glsl" />
+    <None Include="res\shaders\pxl_text_vshader.glsl" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

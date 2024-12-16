@@ -36,6 +36,12 @@
     <ClInclude Include="include\pxl_shader.h">
       <Filter>include\core</Filter>
     </ClInclude>
+    <ClInclude Include="include\pxl_font.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\pxl_text_renderer.h">
+      <Filter>include\core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="core\glad.c">
@@ -47,5 +53,22 @@
     <ClCompile Include="core\example.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="core\pxl_shader.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\pxl_font.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\pxl_text_renderer.cpp">
+      <Filter>source\core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\pxl_text_vshader.glsl">
+      <Filter>resources\shaders</Filter>
+    </None>
+    <None Include="res\shaders\pxl_text_fshader.glsl">
+      <Filter>resources\shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
